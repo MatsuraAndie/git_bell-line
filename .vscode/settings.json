@@ -1,0 +1,28 @@
+
+{
+    /* 基本設定 */
+    "editor.formatOnSave": true, // 保存時自動フォーマット
+    "editor.formatOnType": true, // 入力時自動フォーマット
+    "editor.tabSize": 2, // タブ文字数
+    "editor.renderWhitespace": "all", // ホワイトスペース（半角スペース等）の表示
+    "files.insertFinalNewline": true, // 保存時に末尾を空行にする
+    "files.trimFinalNewlines": true, // 保存時に最終行以降を削除
+    "files.trimTrailingWhitespace": true, // 保存時に行末のホワイトスペースを削除
+
+    /* HTML */
+    "html.format.extraLiners": "", // <head>,<body>,</html>タグ前に空行を入れない
+    "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // フォーマットしない要素を指定
+    "html.format.unformatted": null, // インライン要素をフォーマットしない
+    "files.autoSave": "afterDelay",
+    "editor.detectIndentation": false,
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "bladeFormatter.format.indentSize": 2,
+
+
+  }
+  // 拡張機能
+  // PHP Intelephense
+  // Laravel Blade formatter
+  // Laravel Blade Snippets
+  // Laravel Goto
+  // Prettier - Code formatter
