@@ -25,7 +25,7 @@
       <a href="/office/customers"   class="btn">顧客登録</a>
       <a href="/office/search"      class="btn">配車検索</a>
       <a href="/office/routes"      class="btn">ルート登録</a>
-      <a href="/office/company"     class="btn">会社情報</a>
+      <a href="{{route('admin.myCompanyInfo.show')}}"     class="btn">会社情報</a>
     </div>
   </section>
 
