@@ -7,7 +7,13 @@
   @stack('styles')
 </head>
 <body class="bg-gray-100">
-  <header class="bg-gray-200 p-4 font-bold">ベルライン　システムメニュー</header>
+    <header class="bg-white">
+        <div class="p-5">
+            <a class="block text-teal-600" href="#">
+                ベルライン　システム
+            </a>
+        </div>
+    </header>
   <main class="p-6">@yield('content')</main>
 </body>
 </html>
