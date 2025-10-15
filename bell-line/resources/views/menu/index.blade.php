@@ -2,6 +2,7 @@
 @section('title', 'システムメニュー')
 
 @section('content')
+  <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10">ベルライン　システムメニュー</header>
   <section class="max-w-5xl mx-auto">
     <div class="flex justify-between bg-white p-10 mt-5">
       <div class="w-3/12 bg-blue-500 text-white rounded-2xl text-center font-bold flex justify-center items-center">
@@ -241,7 +242,7 @@
           <path d="M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" />
         </svg>
         配車検索</a>
-      <a href="{{ route('admin.myCompanyInfo.show') }}"
+      <a href="/office/company"
         class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer p-5 flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -270,9 +271,4 @@
     </div>
   </section>
 
-  <style>
-    .btn {
-      @apply block rounded-lg bg-gray-200 hover:bg-gray-300 p-8 text-center;
-    }
-  </style>
 @endsection

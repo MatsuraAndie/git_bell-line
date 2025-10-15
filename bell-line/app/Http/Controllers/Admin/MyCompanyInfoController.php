@@ -2,83 +2,38 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Models\MyCompanyInfo;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\View\View;
-
-
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MyCompanyInfoController extends Controller
 {
+    // 編集画面を表示
+    public function edit()
+    {
+        $my_company_info = MyCompanyInfo::first();
+        return view('office.company', compact('my_company_info'));
+    }
 
-  public function show(): RedirectResponse|View
-  {
+    // 更新処理
+    public function update(Request $request)
+    {
+        $validated = $request->validate([
+            'name'         => 'required|string|max:100',
+            'zip'          => 'nullable|string|max:10',
+            'address'      => 'nullable|string|max:255',
+            'tel'          => 'nullable|string|max:20',
+            'email'        => 'nullable|email|max:100',
+            'bank_name'    => 'nullable|string|max:100',
+            'bank_branch'  => 'nullable|string|max:100',
+            'bank_type'    => 'nullable|string|max:50',
+            'bank_number'  => 'nullable|string|max:50',
+            'note'         => 'nullable|string|max:1000',
+        ]);
 
-    /** @var MyCompanyInfo $my_company_info */
-    $my_company_info = MyCompanyInfo::first();
+        $company = MyCompanyInfo::first() ?? new MyCompanyInfo();
+        $company->fill($validated)->save();
 
-    /** @var string $screen_id */
-    $screen_id = "M011_show";
-
-
-    return view(
-      "admin.my_company_info.show_edit",
-      compact(
-        "screen_id",
-        "my_company_info",
-      )
-    );
-  }
-
-
-
-
-
-
-  public function edit(): RedirectResponse|View
-  {
-
-    /** @var MyCompanyInfo $my_company_info */
-    $my_company_info = MyCompanyInfo::first();
-
-    /** @var string $screen_id */
-    $screen_id = "M011_edit";
-
-
-    return view(
-      "admin.my_company_info.show_edit",
-      compact(
-        "screen_id",
-        "my_company_info",
-      )
-    );
-  }
-
-  public function update(Request $request): RedirectResponse
-  {
-
-
-    /** @var MyCompanyInfo $my_company_info */
-    $my_company_info = MyCompanyInfo::first();
-
-
-    // ↓バリデーション
-    $request->validate([
-      'name' => ['required', 'string', 'max:255'],
-
-    ]);
-    // ↑バリデーション
-
-    // ↑ここまでがチェック---------------------------------------------------------------------------------
-    $my_company_info->name = $request->name;
-    $my_company_info->update();
-
-    return redirect()->route("admin.myCompanyInfo.show")->with(
-      "message",
-      __("自社情報を更新しました。")
-    );
-  }
+        return redirect()->back()->with('success', '会社情報を更新しました。');
+    }
 }
