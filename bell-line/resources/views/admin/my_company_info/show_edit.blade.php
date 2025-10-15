@@ -15,7 +15,7 @@
 
   <x-slot name="header">
     @if ($screen_id == 'M011_show')
-      {{ __('会社情報詳細1111111111') }}
+      {{ __('会社情報詳細222') }}
     @elseif($screen_id == 'M011_edit')
       {{ __('会社情報編集') }}
     @endif
