@@ -15,7 +15,7 @@
   </main>
 
   {{-- フッター --}}
-  <footer class="text-center text-gray-500 text-sm py-4 mt-10">
+  <footer class="text-center text-gray-500 text-xs py-4">
     © {{ date('Y') }} Bell Line
   </footer>
 </body>

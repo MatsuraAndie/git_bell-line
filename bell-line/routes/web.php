@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MyCompanyInfoController;
-
+use App\Http\Controllers\Admin\Office\MyCompanyInfoController;
 
 Route::view('/', 'menu.index');
 
@@ -23,6 +22,6 @@ Route::view('/office/customers',   'office.customers');   // 顧客登録
 Route::view('/office/routes',      'office.routes');      // ルート登録
 // Route::view('/office/company',     'office.company');     // 会社情報
 
-
+// ▼会社情報登録
 Route::get('/office/company', [MyCompanyInfoController::class, 'edit'])->name('company.edit');
 Route::post('/office/company', [MyCompanyInfoController::class, 'update'])->name('company.update');

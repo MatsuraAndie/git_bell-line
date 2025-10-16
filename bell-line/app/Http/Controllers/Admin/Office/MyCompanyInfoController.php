@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Office;
 
 use App\Models\MyCompanyInfo;
 use Illuminate\Http\Request;
