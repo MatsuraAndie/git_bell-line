@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@section('title', '会社情報登録 │ ベルライン')
+<x-for_admin-layout>
+  <x-slot name="title">会社情報 │ ベルライン</x-slot>
 
-@section('content')
   <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10 flex">
     <ul class="flex items-center">
       <li><a href="/">事務所メニュー</a></li>
@@ -11,9 +10,10 @@
           <path d="m6 17 5-5-5-5" />
           <path d="m13 17 5-5-5-5" />
         </svg></li>
-      <li>会社情報登録</li>
+      <li>会社情報</li>
     </ul>
   </header>
+
   <section class="max-w-5xl mx-auto bg-white p-10">
     <form action="{{ route('company.update') }}" method="POST" class="space-y-4">
       @csrf
@@ -55,4 +55,4 @@
     </form>
 
   </section>
-@endsection
+</x-for_admin-layout>
