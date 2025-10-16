@@ -1,13 +1,12 @@
-@extends('layouts.app')
-@section('title', 'システムメニュー')
+<x-for_admin-layout>
+  <x-slot name="title">ベルライン システムメニュー</x-slot>
 
-@section('content')
+  <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10">ベルライン　システムメニュー</header>
   <section class="max-w-5xl mx-auto">
     <div class="flex justify-between bg-white p-10 mt-5">
       <div class="w-3/12 bg-blue-500 text-white rounded-2xl text-center font-bold flex justify-center items-center">
         @php
-          use Carbon\Carbon;
-          $now = Carbon::now();
+          $now = \Carbon\Carbon::now();
           $weekdays = ['日', '月', '火', '水', '木', '金', '土'];
         @endphp
         <ul>
@@ -17,9 +16,9 @@
         </ul>
       </div>
       <div class="w-8/12">
-        <h2 class="flex mb-5 text-blue-700 font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-            stroke-linejoin="round" class="lucide lucide-car-icon lucide-car">
+        <h2 class="flex mb-5 text-blue-700 font-bold"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car-icon lucide-car">
             <path
               d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
             <circle cx="7" cy="17" r="2" />
@@ -32,9 +31,9 @@
             <a href="/driver/report">
               <div class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer">
                 <div class="h-30 w-full checker-bg flex items-center justify-center p-4 text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-notebook-pen-icon lucide-notebook-pen">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-notebook-pen-icon lucide-notebook-pen">
                     <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
                     <path d="M2 6h4" />
                     <path d="M2 10h4" />
@@ -48,7 +47,7 @@
                   <div class="flex items-center justify-between">
                     <h1 class="text-gray-600 font-medium">日報</h1>
                   </div>
-                  <p class="text-gray-400 text-sm my-1">日報記入はこちら</p>
+                  <p class="text-gray-400 text-xs my-1">日報記入</p>
                 </div>
               </div>
             </a>
@@ -57,9 +56,9 @@
             <a href="/driver/schedule">
               <div class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer">
                 <div class="h-30 w-full checker-bg flex items-center justify-center p-4 text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-timer-reset-icon lucide-timer-reset">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-timer-reset-icon lucide-timer-reset">
                     <path d="M10 2h4" />
                     <path d="M12 14v-4" />
                     <path d="M4 13a8 8 0 0 1 8-7 8 8 0 1 1-5.3 14L4 17.6" />
@@ -70,7 +69,7 @@
                   <div class="flex items-center justify-between">
                     <h1 class="text-gray-600 font-medium">スケジュール</h1>
                   </div>
-                  <p class="text-gray-400 text-sm my-1">一日の配送スケジュールです</p>
+                  <p class="text-gray-400 text-xs my-1">一日の配送スケジュール</p>
                 </div>
               </div>
             </a>
@@ -79,9 +78,9 @@
             <a href="/driver/attendance">
               <div class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer">
                 <div class="h-30 w-full checker-bg flex items-center justify-center p-4 text-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-calendar-days-icon lucide-calendar-days">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-calendar-days-icon lucide-calendar-days">
                     <path d="M8 2v4" />
                     <path d="M16 2v4" />
                     <rect width="18" height="18" x="3" y="4" rx="2" />
@@ -98,7 +97,7 @@
                   <div class="flex items-center justify-between">
                     <h1 class="text-gray-600 font-medium">勤怠一覧</h1>
                   </div>
-                  <p class="text-gray-400 text-sm my-1">月間の勤怠表です</p>
+                  <p class="text-gray-400 text-xs my-1">月間の勤怠表</p>
                 </div>
               </div>
             </a>
@@ -237,11 +236,12 @@
           <path
             d="M20 21a2 2 0 0 0 2-2v-3.851c0-1.39-2-2.962-2-4.829V8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2z" />
           <path d="M 22 16 L 2 16" />
-          <path d="M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" />
+          <path
+            d="M4 21a2 2 0 0 1-2-2v-3.851c0-1.39 2-2.962 2-4.829V8a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2z" />
           <path d="M9 7V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3" />
         </svg>
         配車検索</a>
-      <a href="{{ route('admin.myCompanyInfo.show') }}"
+      <a href="/office/company"
         class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer p-5 flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -269,10 +269,4 @@
         ルート登録</a>
     </div>
   </section>
-
-  <style>
-    .btn {
-      @apply block rounded-lg bg-gray-200 hover:bg-gray-300 p-8 text-center;
-    }
-  </style>
-@endsection
+</x-for_admin-layout>

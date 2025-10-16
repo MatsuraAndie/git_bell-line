@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MyCompanyInfoController;
+use App\Http\Controllers\Admin\Office\MyCompanyInfoController;
 
 Route::view('/', 'menu.index');
 
@@ -21,8 +21,7 @@ Route::view('/office/vehicles',    'office.vehicles');    // 車両登録
 Route::view('/office/customers',   'office.customers');   // 顧客登録
 Route::view('/office/routes',      'office.routes');      // ルート登録
 // Route::view('/office/company',     'office.company');     // 会社情報
-// ↓会社情報関連route
-Route::get('admin/my-company-info-show', [MyCompanyInfoController::class, 'show'])->name('admin.myCompanyInfo.show');
-Route::get('admin/my-company-info-edit', [MyCompanyInfoController::class, 'edit'])->name('admin.myCompanyInfo.edit');
-Route::patch('admin/my-company-info-update', [MyCompanyInfoController::class, 'update'])->name('admin.myCompanyInfo.update');
-    // ↑会社情報関連route
+
+// ▼会社情報登録
+Route::get('/office/company', [MyCompanyInfoController::class, 'edit'])->name('company.edit');
+Route::post('/office/company', [MyCompanyInfoController::class, 'update'])->name('company.update');
