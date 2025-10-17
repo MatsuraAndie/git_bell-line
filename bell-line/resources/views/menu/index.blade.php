@@ -203,7 +203,7 @@
           <path d="M3 10h18" />
           <path d="M8 2v4" />
         </svg>
-        出勤表入力・管理</a>
+        勤怠管理</a>
       <a href="/office/payroll"
         class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer p-5 flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
