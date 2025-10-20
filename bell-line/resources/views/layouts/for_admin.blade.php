@@ -18,6 +18,7 @@
   <footer class="text-center text-gray-500 text-xs py-4">
     © {{ date('Y') }} Bell Line
   </footer>
+  <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>
