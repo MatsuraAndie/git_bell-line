@@ -121,7 +121,7 @@
     </ul>
   </section>
   <div class="text-center mt-10">
-    <a href="/"><button
+    <a href="{{ route('office.menu') }}"><button
         class="p-2 rounded bg-gray-500 hover:bg-gray-600 text-white border-gray-700 mx-1">TOPに戻る</button></a>
   </div>
 </x-for_admin-layout>

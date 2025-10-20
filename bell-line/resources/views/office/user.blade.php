@@ -1,5 +1,5 @@
 <x-for_admin-layout>
-  <x-slot name="title">社員登録 │ ベルライン</x-slot>
+  <x-slot name="title">給与明細出力 │ ベルライン</x-slot>
 
   <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10 flex">
     <ul class="flex items-center">
@@ -10,7 +10,7 @@
           <path d="m6 17 5-5-5-5" />
           <path d="m13 17 5-5-5-5" />
         </svg></li>
-      <li>社員登録</li>
+      <li>給与明細出力</li>
     </ul>
   </header>
 
