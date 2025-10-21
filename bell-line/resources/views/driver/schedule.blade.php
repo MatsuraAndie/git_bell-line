@@ -2,10 +2,20 @@
   <x-slot name="title">スケジュール │ ベルライン</x-slot>
 
   <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10 flex justify-between items-center">
-    <p>ベルライン システムメニュー</p>
+    <ul class="flex items-center">
+      <li><a href="{{ route('driver.menu') }}">ドライバーメニュー</a></li>
+      <li class="mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-chevrons-right-icon lucide-chevrons-right">
+          <path d="m6 17 5-5-5-5" />
+          <path d="m13 17 5-5-5-5" />
+        </svg></li>
+      <li>スケジュール</li>
+    </ul>
     <div class="flex flex-wrap items-center justify-center gap-3 mr-20">
       <div class="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-300">
-        <svg class="h-1/2 w-1/2 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <svg class="h-1/2 w-1/2 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="currentColor">
           <path
             d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h1 1 14H20z">
           </path>
