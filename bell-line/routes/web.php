@@ -12,6 +12,7 @@ Route::view('/driver/attendance', 'driver.attendance')->name('driver.attendance'
 
 Route::view('/office/menu',   'office.index')->name('office.menu');
 Route::view('/office/schedules',   'office.schedules')->name('office.schedules');   // 配車スケジュール管理
+Route::view('/office/schedules/create',   'office.schedules_create')->name('office.schedules_create');   // 配車スケジュール管理
 Route::view('/office/reports',     'office.reports')->name('office.reports');     // 日報一覧確認
 Route::view('/office/attendances', 'office.attendances')->name('office.attendances'); // 出勤表入力・管理
 Route::view('/office/search',      'office.search')->name('office.search');      // 配車検索
@@ -24,6 +25,7 @@ Route::view('/office/vehicles',    'office.vehicles')->name('office.vehicles'); 
 Route::view('/office/customers',   'office.customers')->name('office.customers');   // 顧客登録
 Route::view('/office/routes',      'office.routes')->name('office.routes');      // ルート登録
 Route::view('/office/user',      'office.user')->name('office.user');      // ユーザー管理
+Route::view('/office/user/create',      'office.user_create')->name('office.user_create');
 // Route::view('/office/company',     'office.company');     // 会社情報
 
 // ▼会社情報登録
