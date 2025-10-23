@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Office\MyCompanyInfoController;
+use App\Http\Controllers\Admin\Office\AttendanceController;
 
 Route::view('/',   'login');
 
@@ -14,7 +15,7 @@ Route::view('/office/menu',   'office.index')->name('office.menu');
 Route::view('/office/schedules',   'office.schedules')->name('office.schedules');   // 配車スケジュール管理
 Route::view('/office/schedules/create',   'office.schedules_create')->name('office.schedules_create');   // 配車スケジュール管理
 Route::view('/office/reports',     'office.reports')->name('office.reports');     // 日報一覧確認
-Route::view('/office/attendances', 'office.attendances')->name('office.attendances'); // 出勤表入力・管理
+// Route::view('/office/attendances', 'office.attendances')->name('office.attendances'); // 出勤表入力・管理
 Route::view('/office/search',      'office.search')->name('office.search');      // 配車検索
 Route::view('/office/payslips',    'office.payslips')->name('office.payslips');    // 給与明細出力
 Route::view('/office/invoices',    'office.invoices')->name('office.invoices');    // 請求書出力
@@ -31,3 +32,6 @@ Route::view('/office/user/create',      'office.user_create')->name('office.user
 // ▼会社情報登録
 Route::get('/office/company', [MyCompanyInfoController::class, 'edit'])->name('company.edit');
 Route::post('/office/company', [MyCompanyInfoController::class, 'update'])->name('company.update');
+
+// ▼勤怠管理カレンダー
+Route::get('/office/attendances', [AttendanceController::class, 'index'])->name('attendances.index');
