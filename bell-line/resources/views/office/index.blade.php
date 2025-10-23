@@ -57,7 +57,7 @@
             日報一覧確認</a>
         </li>
         <li>
-          <a href="{{ route('office.attendances') }}"
+          <a href="{{ route('attendances.index') }}"
             class="bg-white shadow rounded border border-transparent hover:border-blue-500 cursor-pointer p-5 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
