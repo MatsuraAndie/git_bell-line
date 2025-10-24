@@ -1,8 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">会社情報 │ ベルライン</x-slot>
 
-  @include('common.header', ['title1' => '事務所メニュー', 'title2' => '会社情報'])
-{{-- ここで記されているファイルがないようです★で検索 --}}
+  @include('common.header_office', ['title' => '会社情報'])
   <section class="max-w-7xl mx-auto bg-white p-10 mt-5">
     <h2 class="flex mb-5 text-blue-700 font-bold">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
