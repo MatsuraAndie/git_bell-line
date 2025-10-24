@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">配車スケジュール管理 │ ベルライン</x-slot>
 
-  @include('common.header-office', ['title' => '配車スケジュール管理'])
+  @include('common.header_office', ['title' => '配車スケジュール管理'])
 
   <section class="max-w-8xl mx-auto bg-white p-10">
     <ul class="max-w-4xl grid grid-cols-2 gap-6">

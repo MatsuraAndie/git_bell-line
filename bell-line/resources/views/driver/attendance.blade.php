@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">勤怠一覧 │ ベルライン</x-slot>
 
-  @include('common.header-driver', ['title' => '勤怠一覧'])
+  @include('common.header_driver', ['title' => '勤怠一覧'])
 
   <section class="max-w-7xl mx-auto bg-white p-10">
     <p>※メモ※<br>

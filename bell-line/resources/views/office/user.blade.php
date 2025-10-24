@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">ユーザー管理 │ ベルライン</x-slot>
 
-  @include('common.header-office', ['title' => 'ユーザー管理'])
+  @include('common.header_office', ['title' => 'ユーザー管理'])
 
   <section class="max-w-7xl mx-auto bg-white p-10">
     <div class="flex justify-end">

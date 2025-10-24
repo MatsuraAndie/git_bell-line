@@ -4,7 +4,7 @@
   <header class="bg-blue-500 text-white p-4 font-bold shadow-md mb-10 flex justify-between items-center">
     <p>ベルライン システムメニュー</p>
     <div class="flex items-end justify-end">
-      @include('common.header-part')
+      @include('common.header_part')
     </div>
   </header>
 

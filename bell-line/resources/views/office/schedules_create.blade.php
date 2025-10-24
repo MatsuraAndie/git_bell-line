@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">スケジュール登録 │ ベルライン</x-slot>
 
-  @include('common.header-office', ['title' => 'スケジュール登録'])
+  @include('common.header_office', ['title' => 'スケジュール登録'])
 
   <section class="max-w-7xl mx-auto bg-white p-10">
     <h2 class="flex mb-5 text-blue-700 font-bold">

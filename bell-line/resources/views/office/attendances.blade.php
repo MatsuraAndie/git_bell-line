@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">勤怠管理 │ ベルライン</x-slot>
 
-  @include('common.header-office', ['title' => '勤怠管理'])
+  @include('common.header_office', ['title' => '勤怠管理'])
 
   <section class="max-w-8xl mx-auto bg-white p-10">
     <ul class="grid grid-cols-2 gap-6">

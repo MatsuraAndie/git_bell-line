@@ -9,5 +9,5 @@
       </svg></li>
     <li>{{ $title }}</li>
   </ul>
-  @include('common.header-part')
+  @include('common.header_part')
 </header>

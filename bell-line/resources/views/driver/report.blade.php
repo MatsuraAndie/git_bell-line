@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">日報 │ ベルライン</x-slot>
 
-  @include('common.header-driver', ['title' => '日報'])
+  @include('common.header_driver', ['title' => '日報'])
 
   <section class="max-w-7xl mx-auto bg-white p-10">
     <ul class="max-w-xl">

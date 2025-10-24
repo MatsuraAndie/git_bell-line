@@ -1,7 +1,7 @@
 <x-for_admin-layout>
   <x-slot name="title">社員登録 │ ベルライン</x-slot>
 
-  @include('common.header-office', ['title' => '社員登録'])
+  @include('common.header_office', ['title' => '社員登録'])
 
   <section class="max-w-7xl mx-auto bg-white p-10">
     <ul class="grid grid-cols-2 gap-6">
