@@ -5,12 +5,14 @@ use App\Http\Controllers\Admin\Office\MyCompanyInfoController;
 use App\Http\Controllers\Admin\Office\AttendanceController;
 
 Route::view('/',   'login');
-
+// ↓ドライバーユーザー用route
 Route::view('driver/menu',   'driver.index')->name('driver.menu');
 Route::view('driver/report',   'driver.report')->name('driver.report');
 Route::view('driver/schedule', 'driver.schedule')->name('driver.schedule');
 Route::view('driver/attendance', 'driver.attendance')->name('driver.attendance');
+// ↑ドライバーユーザー用route
 
+// ↓事務所ユーザー用route
 Route::view('office/menu',   'office.index')->name('office.menu');
 Route::view('office/schedules',   'office.schedules')->name('office.schedules');   // 配車スケジュール管理
 Route::view('office/schedules/create',   'office.schedules_create')->name('office.schedules_create');   // 配車スケジュール管理
@@ -35,3 +37,4 @@ Route::post('office/company', [MyCompanyInfoController::class, 'update'])->name(
 
 // ▼勤怠管理カレンダー
 Route::get('/office/attendances', [AttendanceController::class, 'index'])->name('attendances.index');
+// ↑事務所ユーザー用route
